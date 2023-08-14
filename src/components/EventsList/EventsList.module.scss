@@ -1,4 +1,4 @@
-.list {
+.events-list {
   display: flex;
   list-style: none;
   margin: 0;
@@ -7,7 +7,7 @@
   border-top: 1px solid #c8c8c8;
 }
 
-.item {
+.event-item {
   padding: 10px;
   width: 150px;
   border: 2px solid #316bfe;
@@ -16,7 +16,7 @@
   background-color: #ecf1ff;
 }
 
-.item::after {
+.event-item::after {
   content: '';
   position: absolute;
   width: 15px;
@@ -27,7 +27,7 @@
   z-index: 1;
 }
 
-.item::before {
+.event-item::before {
   content: '';
   position: absolute;
   height: 13px;
@@ -38,7 +38,7 @@
   z-index: 1;
 }
 
-.text {
+.description {
   margin: 0;
   padding: 0;
 }

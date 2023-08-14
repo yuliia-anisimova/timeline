@@ -1,51 +1,36 @@
-// .container {
-//   display: flex;
-//   border: 3px dashed #316bfe;
-//   overflow-x: auto;
-// }
-
-// .section  {
-//   min-width: 200px;
-//   // max-width: 100%;
-//   border-right: 1px solid #c8c8c8;
-// }
-
-.container {
+.timeline {
   display: flex;
   border: 3px dashed #316bfe;
   overflow-x: auto;
 }
 
-.section {
-  display: block;
+.details {
+  display: flex;
   max-width: fit-content;
   min-width: 200px;
   flex-direction: column;
-  flex: 1;
+  flex: 0 0 auto; 
   border-right: 1px solid #c8c8c8;
 }
 
-.title {
-  text-align: center;
-}
-
-.container::-webkit-scrollbar {
+.details::-webkit-scrollbar {
   height: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   border-radius: 5px;
   background-color: #f0f0f0;
 }
- 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: #d6d6d6; 
   border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #316bfe; 
+}
+
+.title {
+  text-align: center;
 }
