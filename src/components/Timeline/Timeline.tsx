@@ -68,16 +68,18 @@ const displayedEvents = months.map((month, index) => {
 
 const {
   container,
+  title,
+  section,
 } = classes;
 
 const Timeline = () => {
   return (
     <article className={container}>
       {displayedEvents.map(({ id, month, monthEvents }) => (
-        <section key={id}>
-          <p>{month}</p>
+        <div key={id} className={section}>
+          <p className={title}>{month}</p>
           <EventsList events={monthEvents} />
-        </section>
+        </div>
       ))}
     </article>
   );
