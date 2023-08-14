@@ -4,7 +4,7 @@ import { MonthEvent } from '../../types/monthEvent';
 import EventsList from '../EventsList';
 import classes from './Timeline.module.scss';
 
-const months = [
+const months: string[] = [
   'January',
   'February',
   'March',

@@ -16,9 +16,9 @@ const {
 const EventsList: React.FC<Props> = ({ events }) => {
   return (
     <ul className={eventsList}>
-      {events.map((e) => {
-        const dateString = e.date;
-        const date = new Date(dateString);
+      {events.map(({ id, name, date }) => {
+        const dateString = date;
+        const eventDate = new Date(dateString);
 
         const options: Intl.DateTimeFormatOptions = {
           year: 'numeric',
@@ -28,11 +28,11 @@ const EventsList: React.FC<Props> = ({ events }) => {
           minute: 'numeric',
         };
 
-        const formattedDate = date.toLocaleDateString('en-US', options);
+        const formattedDate = eventDate.toLocaleDateString('en-US', options);
 
         return (
-          <li key={e.id} className={eventItem}>
-            <p className={title}>{e.name}</p>
+          <li key={id} className={eventItem}>
+            <p className={title}>{name}</p>
             <p className={description}>{formattedDate}</p>
           </li>
         );
