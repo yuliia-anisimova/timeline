@@ -9,6 +9,7 @@ interface Props {
 const {
   'events-list': eventsList,
   'event-item': eventItem,
+  title,
   description,
 } = classes;
 
@@ -31,7 +32,7 @@ const EventsList: React.FC<Props> = ({ events }) => {
 
         return (
           <li key={e.id} className={eventItem}>
-            <p className={description}>{e.name}</p>
+            <p className={title}>{e.name}</p>
             <p className={description}>{formattedDate}</p>
           </li>
         );

@@ -1,19 +1,23 @@
+@import "../../styles/utils/reset";
+@import "../../styles/utils/vars";
+@import "../../styles/fonts/typography.scss";
+
 .events-list {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 20px ;
   gap: 30px;
-  border-top: 1px solid #c8c8c8;
+  border-top: 1px solid $primary-gray-color;
 }
 
 .event-item {
   padding: 10px;
   width: 150px;
-  border: 2px solid #316bfe;
+  border: 2px solid $accent-color;
   border-radius: 5px;
   position: relative;
-  background-color: #ecf1ff;
+  background-color: $light-blue-color;
 }
 
 .event-item::after {
@@ -22,7 +26,7 @@
   width: 15px;
   height: 15px;
   top: -30px;
-  background-color: #316bfe;
+  background-color: $accent-color;
   border-radius: 50%;
   z-index: 1;
 }
@@ -34,11 +38,16 @@
   width: 1px;
   top: -15px;
   left: 17px;
-  background-color: #316bfe;
+  background-color: $accent-color;
   z-index: 1;
 }
 
+.title {
+  @include regular-text;
+  margin-bottom: 5px;
+}
+
 .description {
-  margin: 0;
-  padding: 0;
+  @include light-text;
+  font-size: 0.7em;
 }

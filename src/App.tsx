@@ -4,7 +4,7 @@ import Timeline from './components/Timeline/Timeline';
 
 export const App: React.FC = () => {
   return (
-    <div className="starter">
+    <div className="content">
       <Timeline />
     </div>
   );

@@ -1,6 +1,9 @@
+@import "../../styles/fonts/typography.scss";
+@import "../../styles/utils/vars";
+
 .timeline {
   display: flex;
-  border: 3px dashed #316bfe;
+  border: 3px dashed $accent-color;
   overflow-x: auto;
 }
 
@@ -10,7 +13,7 @@
   min-width: 200px;
   flex-direction: column;
   flex: 0 0 auto; 
-  border-right: 1px solid #c8c8c8;
+  border-right: 1px solid $primary-gray-color;
 }
 
 .timeline::-webkit-scrollbar {
@@ -28,9 +31,14 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #316bfe; 
+  background: $accent-color; 
 }
 
 .title {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  @include medium-text;
+  text-transform: uppercase;
 }
